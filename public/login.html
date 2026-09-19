@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вход — Чистый дом</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header class="site-header wrap">
+      <a class="brand" href="/"><span class="brand-icon" aria-hidden="true">✦</span>Чистый дом</a>
+      <nav aria-label="Основная навигация">
+        <a href="/">На главную</a><a data-guest href="/register.html">Регистрация</a
+        ><a data-member href="/cabinet.html" hidden>Личный кабинет</a>
+      </nav>
+    </header>
+    <main id="main" class="form-page narrow">
+      <p class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p>
+      <h1>С возвращением</h1>
+      <p class="quiet">Войдите, чтобы заказать уборку и посмотреть заявки.</p>
+      <p id="registered-message" class="notice success" hidden>
+        Регистрация завершена. Войдите с вашим логином и паролем.
+      </p>
+      <form id="login-form" class="panel" method="post" action="/api/login" novalidate>
+        <div class="field">
+          <label for="login">Логин</label
+          ><input
+            id="login"
+            name="login"
+            maxlength="20"
+            autocomplete="username"
+            autocapitalize="none"
+            spellcheck="false"
+            required
+          />
+        </div>
+        <div class="field">
+          <label for="password">Пароль</label
+          ><input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+        </div>
+        <p class="form-message" role="status"></p>
+        <button class="wide" type="submit">Войти</button>
+      </form>
+      <p class="form-bottom">Ещё не зарегистрированы? <a href="/register.html">Регистрация</a></p>
+      <noscript>Для входа включите JavaScript.</noscript>
+    </main>
+    <footer class="site-footer wrap">
+      <span>Чистый дом · Учебный проект</span><a href="/consent.html">Обработка данных и cookie</a>
+    </footer>
+  </body>
+</html>

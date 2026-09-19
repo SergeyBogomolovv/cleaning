@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Чистый дом — клининг</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header class="site-header wrap">
+      <a class="brand" href="/"><span class="brand-icon" aria-hidden="true">✦</span>Чистый дом</a>
+      <nav aria-label="Основная навигация">
+        <a href="#services">Услуги</a><a href="#search">Поиск</a
+        ><a data-guest href="/login.html">Войти</a
+        ><a class="button small secondary" data-guest href="/register.html">Регистрация</a
+        ><a class="button small" data-member href="/cabinet.html" hidden>Личный кабинет</a>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">КЛИНИНГ ДЛЯ ДОМА</p>
+          <h1>
+            Больше чистоты.<br /><span>Больше времени<br />для себя.</span>
+          </h1>
+          <p class="lead">
+            Повседневная уборка или большой порядок после ремонта — выберите то, что нужно вашему
+            дому.
+          </p>
+          <a class="button" href="/cabinet.html"
+            >Заказать уборку <span aria-hidden="true">↗</span></a
+          >
+          <p class="quiet hero-note">Простая заявка. Удобная дата. Всё под рукой.</p>
+        </div>
+        <aside class="process">
+          <span class="process-icon" aria-hidden="true">✦</span>
+          <h2>Чистота начинается<br />с трёх шагов</h2>
+          <ol>
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Выберите услугу</strong>
+                <p>Для повседневного или большого порядка.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Укажите адрес и дату</strong>
+                <p>Заполните короткую форму в кабинете.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Сохраните заявку</strong>
+                <p>Все ваши обращения в одном месте.</p>
+              </div>
+            </li>
+          </ol>
+          <div class="process-bottom">Для квартиры, в которой приятно жить.</div>
+        </aside>
+      </section>
+      <section class="section" id="services">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">НАШИ УСЛУГИ</p>
+            <h2>Для любого повода</h2>
+          </div>
+          <p class="quiet">От лёгкой уборки до нового начала.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-number">01 / РЕГУЛЯРНО</span>
+            <h3>Поддерживающая уборка</h3>
+            <p>Порядок на каждый день: полы, пыль, кухня и ванная.</p>
+            <a href="/cabinet.html">Оставить заявку <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card">
+            <span class="service-number">02 / ТЩАТЕЛЬНО</span>
+            <h3>Генеральная уборка</h3>
+            <p>Тщательная уборка квартиры, включая труднодоступные места.</p>
+            <a href="/cabinet.html">Оставить заявку <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card">
+            <span class="service-number">03 / НОВЫЙ СТАРТ</span>
+            <h3>Уборка после ремонта</h3>
+            <p>Уберём строительную пыль и подготовим дом к жизни.</p>
+            <a href="/cabinet.html">Оставить заявку <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+      <section class="search-section" id="search">
+        <div>
+          <p class="eyebrow">НАЙТИ НУЖНОЕ</p>
+          <h2>Какая уборка вам нужна?</h2>
+          <p class="quiet">Поиск по названиям и описаниям услуг.</p>
+        </div>
+        <form id="search-form" novalidate>
+          <div class="field">
+            <label for="q">Поисковый запрос</label
+            ><input
+              id="q"
+              name="q"
+              type="search"
+              maxlength="20"
+              required
+              placeholder="Например, кухня"
+            /><small>До 20 символов: буквы, цифры, пробелы и дефисы.</small>
+          </div>
+          <button type="submit">Поиск по сайту</button>
+          <p class="form-message" role="status"></p>
+        </form>
+        <div id="search-results" class="search-results" aria-live="polite"></div>
+      </section>
+      <noscript
+        ><p class="notice">
+          Для регистрации, поиска и оформления заявок включите JavaScript.
+        </p></noscript
+      >
+    </main>
+    <footer class="site-footer wrap">
+      <span>Чистый дом · Учебный проект</span><a href="/consent.html">Обработка данных и cookie</a>
+    </footer>
+    <section id="cookie-notice" class="cookie-notice" aria-label="Использование cookie" hidden>
+      <div>
+        <strong>Немного о cookie</strong>
+        <p>
+          Используем необходимые cookie для входа и сохранения этого уведомления. Без рекламы и
+          аналитики. <a href="/consent.html#cookies">Подробнее</a>
+        </p>
+        <p id="cookie-error" role="status"></p>
+      </div>
+      <button id="accept-cookies" type="button">Понятно</button>
+    </section>
+  </body>
+</html>

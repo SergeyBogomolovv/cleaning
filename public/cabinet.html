@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Личный кабинет — Чистый дом</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header class="site-header wrap">
+      <a class="brand" href="/"><span class="brand-icon" aria-hidden="true">✦</span>Чистый дом</a>
+      <nav aria-label="Основная навигация">
+        <a href="/">На главную</a
+        ><button id="logout" class="small secondary" type="button">Выйти</button>
+      </nav>
+    </header>
+    <main id="main" class="wrap cabinet">
+      <p class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p>
+      <h1 id="greeting">Ваш домашний порядок</h1>
+      <p class="quiet">Оформите новую заявку или посмотрите уже сохранённые.</p>
+      <p id="page-message" role="status"></p>
+      <div class="cabinet-grid">
+        <section>
+          <h2>Заказать уборку</h2>
+          <form id="request-form" class="panel" method="post" action="/api/requests" novalidate>
+            <div class="field">
+              <label for="service">Услуга</label
+              ><select id="service" name="service" required>
+                <option value="">Выберите услугу</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="address">Адрес уборки</label
+              ><input
+                id="address"
+                name="address"
+                autocomplete="street-address"
+                required
+                placeholder="Город, улица, дом, квартира"
+              /><small>Не более 100 символов.</small>
+            </div>
+            <div class="field">
+              <label for="date">Желаемая дата</label
+              ><input id="date" name="date" type="date" required /><small
+                >Сегодня или позже. Время — московское.</small
+              >
+            </div>
+            <p class="form-message" role="status"></p>
+            <button class="wide" type="submit">Отправить заявку</button>
+          </form>
+        </section>
+        <section>
+          <h2>Мои заявки</h2>
+          <div id="requests" class="request-list" aria-live="polite">
+            <p class="quiet">Загружаем заявки…</p>
+          </div>
+        </section>
+      </div>
+      <noscript>Для работы с заявками включите JavaScript.</noscript>
+    </main>
+    <footer class="site-footer wrap">
+      <span>Чистый дом · Учебный проект</span><a href="/consent.html">Обработка данных и cookie</a>
+    </footer>
+  </body>
+</html>
