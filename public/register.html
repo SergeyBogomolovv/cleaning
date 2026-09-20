@@ -10,112 +10,109 @@
   <body>
     <a class="skip-link" href="#main">К содержимому</a>
     <header class="site-header wrap">
-      <a class="brand" href="/"><span class="brand-icon" aria-hidden="true">✦</span>Чистый дом</a>
+      <a class="brand" href="/">Чистый дом</a>
       <nav aria-label="Основная навигация">
         <a href="/">На главную</a><a data-guest href="/login.html">Войти</a
         ><a data-member href="/cabinet.html" hidden>Личный кабинет</a>
       </nav>
     </header>
-    <main id="main" class="form-page">
-      <p class="eyebrow">ДОБРО ПОЖАЛОВАТЬ</p>
-      <h1>Создать аккаунт</h1>
+    <main id="main" class="wrap">
+      <h1>Регистрация</h1>
       <p class="quiet">Зарегистрируйтесь, чтобы оставлять заявки на уборку.</p>
-      <form id="register-form" class="panel" method="post" action="/api/register" novalidate>
-        <p class="form-intro">Все поля обязательны. До 20 символов в каждом, кроме пароля.</p>
-        <div class="form-grid">
-          <div class="field">
-            <label for="lastName">Фамилия</label
-            ><input
-              id="lastName"
-              name="lastName"
-              maxlength="20"
-              autocomplete="family-name"
-              required
-              placeholder="Иванов"
-            /><small>Русские буквы, первая — заглавная.</small>
-          </div>
-          <div class="field">
-            <label for="firstName">Имя</label
-            ><input
-              id="firstName"
-              name="firstName"
-              maxlength="20"
-              autocomplete="given-name"
-              required
-              placeholder="Иван"
-            /><small>Допустимо составное имя: Анна-Мария.</small>
-          </div>
-          <div class="field full">
-            <label for="patronymic">Отчество</label
-            ><input
-              id="patronymic"
-              name="patronymic"
-              maxlength="20"
-              autocomplete="additional-name"
-              required
-              placeholder="Иванович"
-            /><small>Например: Иванович, Рашид оглы или Рашид-оглы.</small>
-          </div>
-          <div class="field">
-            <label for="phone">Телефон</label
-            ><input
-              id="phone"
-              name="phone"
-              type="tel"
-              maxlength="20"
-              autocomplete="tel"
-              required
-              placeholder="8(999)123-45-67"
-            /><small>Формат: 8(999)123-45-67.</small>
-          </div>
-          <div class="field">
-            <label for="email">Email</label
-            ><input
-              id="email"
-              name="email"
-              type="email"
-              maxlength="20"
-              autocomplete="email"
-              required
-              placeholder="ivan@mail.ru"
-            /><small>Не более 20 символов по условию задания.</small>
-          </div>
-          <div class="field">
-            <label for="login">Логин</label
-            ><input
-              id="login"
-              name="login"
-              maxlength="20"
-              autocomplete="username"
-              autocapitalize="none"
-              spellcheck="false"
-              required
-              placeholder="Ivan"
-            /><small>Только латинские буквы A–Z и a–z.</small>
-          </div>
-          <div class="field">
-            <label for="password">Пароль</label
-            ><input
-              id="password"
-              name="password"
-              type="password"
-              minlength="8"
-              autocomplete="new-password"
-              required
-            /><small>От 8 символов: A–Z, a–z, цифра и символ $#@!.</small>
-          </div>
+      <form id="register-form" method="post" action="/api/register" novalidate>
+        <p>Все поля обязательны. До 20 символов в каждом, кроме пароля.</p>
+        <div class="field">
+          <label for="lastName">Фамилия</label
+          ><input
+            id="lastName"
+            name="lastName"
+            maxlength="20"
+            autocomplete="family-name"
+            required
+            placeholder="Иванов"
+          /><small>Русские буквы, первая — заглавная.</small>
+        </div>
+        <div class="field">
+          <label for="firstName">Имя</label
+          ><input
+            id="firstName"
+            name="firstName"
+            maxlength="20"
+            autocomplete="given-name"
+            required
+            placeholder="Иван"
+          /><small>Допустимо составное имя: Анна-Мария.</small>
+        </div>
+        <div class="field">
+          <label for="patronymic">Отчество</label
+          ><input
+            id="patronymic"
+            name="patronymic"
+            maxlength="20"
+            autocomplete="additional-name"
+            required
+            placeholder="Иванович"
+          /><small>Например: Иванович, Рашид оглы или Рашид-оглы.</small>
+        </div>
+        <div class="field">
+          <label for="phone">Телефон</label
+          ><input
+            id="phone"
+            name="phone"
+            type="tel"
+            maxlength="20"
+            autocomplete="tel"
+            required
+            placeholder="8(999)123-45-67"
+          /><small>Формат: 8(999)123-45-67.</small>
+        </div>
+        <div class="field">
+          <label for="email">Email</label
+          ><input
+            id="email"
+            name="email"
+            type="email"
+            maxlength="20"
+            autocomplete="email"
+            required
+            placeholder="ivan@mail.ru"
+          /><small>Не более 20 символов по условию задания.</small>
+        </div>
+        <div class="field">
+          <label for="login">Логин</label
+          ><input
+            id="login"
+            name="login"
+            maxlength="20"
+            autocomplete="username"
+            autocapitalize="none"
+            spellcheck="false"
+            required
+            placeholder="Ivan"
+          /><small>Только латинские буквы A–Z и a–z.</small>
+        </div>
+        <div class="field">
+          <label for="password">Пароль</label
+          ><input
+            id="password"
+            name="password"
+            type="password"
+            minlength="8"
+            autocomplete="new-password"
+            required
+          /><small>От 8 символов: A–Z, a–z, цифра и символ $#@!.</small>
         </div>
         <div class="field consent-field">
           <label class="check-label" for="consent"
             ><input id="consent" name="consent" type="checkbox" required /><span
               >Согласие на обработку персональных данных</span
             ></label
-          ><a href="/consent.html" target="_blank" rel="noopener">Прочитать образец согласия ↗</a>
+          ><a href="/consent.html" target="_blank" rel="noopener">Прочитать образец согласия</a>
         </div>
         <p class="form-message" role="status"></p>
-        <button class="wide" type="submit">Зарегистрироваться</button>
+        <button type="submit">Зарегистрироваться</button>
       </form>
-      <p class="form-bottom">Уже есть аккаунт? <a href="/login.html">Войти</a></p>
+      <p>Уже есть аккаунт? <a href="/login.html">Войти</a></p>
       <noscript>Для отправки формы включите JavaScript.</noscript>
     </main>
     <footer class="site-footer wrap">

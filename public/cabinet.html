@@ -10,21 +10,19 @@
   <body>
     <a class="skip-link" href="#main">К содержимому</a>
     <header class="site-header wrap">
-      <a class="brand" href="/"><span class="brand-icon" aria-hidden="true">✦</span>Чистый дом</a>
+      <a class="brand" href="/">Чистый дом</a>
       <nav aria-label="Основная навигация">
-        <a href="/">На главную</a
-        ><button id="logout" class="small secondary" type="button">Выйти</button>
+        <a href="/">На главную</a><button id="logout" type="button">Выйти</button>
       </nav>
     </header>
-    <main id="main" class="wrap cabinet">
-      <p class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p>
-      <h1 id="greeting">Ваш домашний порядок</h1>
+    <main id="main" class="wrap">
+      <h1 id="greeting">Личный кабинет</h1>
       <p class="quiet">Оформите новую заявку или посмотрите уже сохранённые.</p>
       <p id="page-message" role="status"></p>
-      <div class="cabinet-grid">
+      <div>
         <section>
           <h2>Заказать уборку</h2>
-          <form id="request-form" class="panel" method="post" action="/api/requests" novalidate>
+          <form id="request-form" method="post" action="/api/requests" novalidate>
             <div class="field">
               <label for="service">Услуга</label
               ><select id="service" name="service" required>
@@ -48,12 +46,12 @@
               >
             </div>
             <p class="form-message" role="status"></p>
-            <button class="wide" type="submit">Отправить заявку</button>
+            <button type="submit">Отправить заявку</button>
           </form>
         </section>
         <section>
           <h2>Мои заявки</h2>
-          <div id="requests" class="request-list" aria-live="polite">
+          <div id="requests" aria-live="polite">
             <p class="quiet">Загружаем заявки…</p>
           </div>
         </section>

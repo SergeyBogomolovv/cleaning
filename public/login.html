@@ -10,20 +10,19 @@
   <body>
     <a class="skip-link" href="#main">К содержимому</a>
     <header class="site-header wrap">
-      <a class="brand" href="/"><span class="brand-icon" aria-hidden="true">✦</span>Чистый дом</a>
+      <a class="brand" href="/">Чистый дом</a>
       <nav aria-label="Основная навигация">
         <a href="/">На главную</a><a data-guest href="/register.html">Регистрация</a
         ><a data-member href="/cabinet.html" hidden>Личный кабинет</a>
       </nav>
     </header>
-    <main id="main" class="form-page narrow">
-      <p class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p>
-      <h1>С возвращением</h1>
+    <main id="main" class="wrap">
+      <h1>Вход</h1>
       <p class="quiet">Войдите, чтобы заказать уборку и посмотреть заявки.</p>
       <p id="registered-message" class="notice success" hidden>
         Регистрация завершена. Войдите с вашим логином и паролем.
       </p>
-      <form id="login-form" class="panel" method="post" action="/api/login" novalidate>
+      <form id="login-form" method="post" action="/api/login" novalidate>
         <div class="field">
           <label for="login">Логин</label
           ><input
@@ -47,9 +46,9 @@
           />
         </div>
         <p class="form-message" role="status"></p>
-        <button class="wide" type="submit">Войти</button>
+        <button type="submit">Войти</button>
       </form>
-      <p class="form-bottom">Ещё не зарегистрированы? <a href="/register.html">Регистрация</a></p>
+      <p>Ещё не зарегистрированы? <a href="/register.html">Регистрация</a></p>
       <noscript>Для входа включите JavaScript.</noscript>
     </main>
     <footer class="site-footer wrap">
