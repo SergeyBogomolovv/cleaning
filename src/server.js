@@ -6,7 +6,7 @@ import { promisify } from 'node:util'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { db, dataDir } from './db.js'
 import { User, CleaningRequest } from './models.js'
-import { sessionLifetime, SQLiteStore, stopSessionCleanup } from './session-store.js'
+import { sessionLifetime, DatabaseStore, stopSessionCleanup } from './session-store.js'
 import {
   normalize,
   validate,
@@ -55,7 +55,7 @@ app.use(
   session({
     name: 'cleaning.sid',
     secret,
-    store: new SQLiteStore(),
+    store: new DatabaseStore(),
     resave: false,
     saveUninitialized: false,
     rolling: true,
@@ -158,7 +158,7 @@ app.post('/api/login', authLimit, async (req, res) => {
   const data = checked(req, res, ['login', 'password'])
   if (!data) return
   const user = await User.findOne({
-    where: { login: data.login },
+    where: { login: data.login.toLowerCase() },
     attributes: ['id', 'passwordHash'],
   })
   const stored = user?.passwordHash || dummyHash

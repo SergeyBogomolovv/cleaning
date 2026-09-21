@@ -2,7 +2,7 @@
   "name": "cleaning-study",
   "version": "1.0.0",
   "private": true,
-  "description": "Учебный сайт клининга: Express, SQLite, HTML, CSS и JavaScript",
+  "description": "Учебный сайт клининга: Express, PostgreSQL, HTML, CSS и JavaScript",
   "type": "module",
   "engines": {
     "node": ">=22.16.0"
@@ -19,7 +19,8 @@
     "express": "^5.2.1",
     "express-rate-limit": "^8.7.0",
     "express-session": "^1.19.0",
-    "sequelize": "^6.37.8",
-    "sqlite3": "^6.0.1"
+    "pg": "^8.23.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
   }
 }

@@ -5,7 +5,7 @@ import { Session } from './models.js'
 export const sessionLifetime = 30 * 60 * 1000
 
 // express-session использует callbacks, а Sequelize возвращает Promise.
-export class SQLiteStore extends session.Store {
+export class DatabaseStore extends session.Store {
   // Истёкшую сессию считаем отсутствующей, даже если запись ещё в БД.
   async get(sid, callback) {
     try {

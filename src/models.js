@@ -11,8 +11,13 @@ export const User = db.define(
     lastName: text('last_name'),
     firstName: text('first_name'),
     patronymic: text('patronymic'),
-    // NOCASE сохраняет сравнение логинов без учёта регистра на уровне SQLite.
-    login: { type: 'TEXT COLLATE NOCASE', allowNull: false, unique: true },
+    // Храним логин в нижнем регистре, чтобы Ivan и ivan считались одинаковыми.
+    login: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      unique: true,
+      set(value) { this.setDataValue('login', value.toLowerCase()) },
+    },
     passwordHash: text('password_hash'),
     phone: text('phone'),
     email: text('email'),
